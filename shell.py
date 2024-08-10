@@ -40,6 +40,7 @@ def main():
                     if not found:
                         print(f"{e}: not found")
             continue
+
         else:
             found = False
             for path in os.getenv("PATH").split(os.pathsep):
@@ -50,10 +51,10 @@ def main():
                             print(result.stdout, end="")
                             found = True
                             break
-                        if found:
-                            break
-                    if not found:
-                            print(f"oyster: '{command}' error")
+                    if found:
+                        break
+            if not found:
+                print(f"oyster: '{command}' error")
 
 if __name__ == "__main__":
     main()

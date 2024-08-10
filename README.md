@@ -6,4 +6,4 @@ this is a simple shell named oyster here is the setup
 2. it is setup change the code do whatever you want to do with the code
 
 3. (~>) 🫧 echo so long bash!
-so long bash!
+4. so long bash!

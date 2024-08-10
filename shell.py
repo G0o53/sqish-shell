@@ -1,5 +1,6 @@
 import sys
 import os
+import subprocess
 
 def main():
     while True:
@@ -39,9 +40,20 @@ def main():
                     if not found:
                         print(f"{e}: not found")
             continue
-
-        # Catch-all for unsupported commands
-        print(f"oyster: '{command}' error")
+        else:
+            found = False
+            for path in os.getenv("PATH").split(os.pathsep):
+                if os.path.isdir(path):
+                    for f in os.listdir(path):
+                        if f == c[0]:
+                            result = subprocess.run(c, capture_output=True, text=True)
+                            print(result.stdout, end="")
+                            found = True
+                            break
+                        if found:
+                            break
+                    if not found:
+                            print(f"oyster: '{command}' error")
 
 if __name__ == "__main__":
     main()

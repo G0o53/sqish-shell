@@ -16,11 +16,11 @@ def main():
         if c[0] == "echo":
             sys.stdout.write(" ".join(c[1:]) + "\n")
             continue
-                
-        if c[0] == "type" :
+
+        if c[0] == "type":
             for e in c[1:]:
                 if e == "echo":
-                    print("echo is a shell bultin")
+                    print("echo is a shell builtin")
                 elif e == "exit":
                     print("exit is a shell builtin")
                 elif e == "type":
@@ -30,20 +30,17 @@ def main():
                     for path in os.getenv("PATH").split(":"):
                         if os.path.isdir(path):
                             for f in os.listdir(path):
-                                if f == c[1]:
-                                    print(f"{c[1]} is {path}/{c[1]}")
+                                if f == e:
+                                    print(f"{e} is {path}/{e}")
                                     found = True
                                     break
-                                if found:
-                                    break
-                            if not found:
-                                print(f"{e}: not found")
-                    continue
-                    
+                            if found:
+                                break
+                    if not found:
+                        print(f"{e}: not found")
+            continue
 
-
-        #
-
+        # Catch-all for unsupported commands
         print(f"oyster: '{command}' error")
 
 if __name__ == "__main__":

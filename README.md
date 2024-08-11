@@ -2,7 +2,7 @@ Sqish shell
 
 this is a simple shell named sqish (no pronounciation say it skish or squish). Here is the setup!
 
-1. use this command ' echo password reqiured (sudo )&& sudo su root && cd / && cd /bin && git clone https://github.com/MatthewLizzard/squish-shell-compiled/tree/main'
+1. use this command 'git clone https://github.com/MatthewLizzard/squish-shell-compiled/tree/main ~'
 2. it is setup change the code do whatever you want to do with the code
 
 3. (~>) 🫧 echo WOW!

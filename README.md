@@ -1,4 +1,4 @@
-Oyster shell
+Sqish shell
 
 this is a simple shell named oyster here is the setup
 

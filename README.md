@@ -7,3 +7,7 @@ this is a simple shell named oyster here is the setup
 
 3. (~>) 🫧 echo so long bash!
 4. so long bash!
+
+notes:
+
+- nano, nvim, vim, vi are very slow

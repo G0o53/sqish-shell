@@ -1,13 +1,14 @@
 Sqish shell
 
-this is a simple shell named oyster here is the setup
+this is a simple shell named sqish (no pronounciation say it skish or squish). Here is the setup!
 
-1. use this command 'cd ~ && sudo mkdir .oyster && git clone https://github.com/MatthewLizzard/oyster-shell ~/.oyster'
+1. use this command ' echo password reqiured (sudo )&& sudo su root && git clone https://github.com/MatthewLizzard/oyster-shell/ /bin'
 2. it is setup change the code do whatever you want to do with the code
 
-3. (~>) 🫧 echo so long bash!
-4. so long bash!
+3. (~>) 🫧 echo WOW!
+4. WOW!
 
 notes:
 
 - nano, nvim, vim, vi are very slow
+- does not support pipes or histroy

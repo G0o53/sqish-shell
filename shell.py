@@ -17,15 +17,30 @@ def main():
         if c[0] == "echo":
             sys.stdout.write(" ".join(c[1:]) + "\n")
             continue
+        if c[0] == "cd":
+            if len(c) < 2 or c[1] == "~" or c[1] == "":
+                os.chdir(os.path.expanduser("~"))
+            elif c[1] == "/":
+                os.chdir("/")
+            else:
+                try:
+                    os.chdir(c[1])
+                except FileNotFoundError:
+                    print(f"sqish (said by cd): no such file or directory: {c[1]}")
+
+        if c[0] == "pwd":
+            os.getcwd()
 
         if c[0] == "type":
             for e in c[1:]:
                 if e == "echo":
-                    print("echo is a shell builtin")
+                    print("echo is builtin WOW")
                 elif e == "exit":
-                    print("exit is a shell builtin")
+                    print("exit is builtin WOW")
                 elif e == "type":
-                    print("type is a shell builtin")
+                    print("type is builtin WOW")
+                elif e == "cd":
+                    print("cd is builtin WOW")
                 else:
                     found = False
                     for path in os.getenv("PATH").split(":"):
@@ -54,7 +69,7 @@ def main():
                     if found:
                         break
             if not found:
-                print(f"oyster: '{command}' error")
+                print(f"sqish: '{command}' error")
 
 if __name__ == "__main__":
     main()
